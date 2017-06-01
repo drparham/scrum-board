@@ -13,7 +13,14 @@ class CreateProjectsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('projects', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('projectable_id');
+            $table->string('projectable_type');
+            $table->string('name');
+            $table->text('description');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('projects');
     }
 }

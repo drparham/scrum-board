@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrganizationsTable extends Migration
+class CreateSprintsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateOrganizationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('organizations', function (Blueprint $table) {
+        Schema::create('sprints', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('project_id');
             $table->string('name');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateOrganizationsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('organizations');
+        Schema::drop('sprints');
     }
 }

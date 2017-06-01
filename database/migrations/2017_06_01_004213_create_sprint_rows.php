@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectRows extends Migration
+class CreateSprintRows extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class CreateProjectRows extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('sprint_rows', function(Blueprint $table) {
+            $table->increments('id');
+            $table->integer('sprint_id');
+            $table->string('type'); //RowType Enum ('Bugs', 'Feature')
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreateProjectRows extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('sprint_rows');
     }
 }
