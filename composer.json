@@ -9,7 +9,8 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "marc-mabe/php-enum": "^2.3",
-        "pta/formbuilder": "^0.2.10"
+        "pta/formbuilder": "^0.2.10",
+        "silber/bouncer": "v1.0.0-beta.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
