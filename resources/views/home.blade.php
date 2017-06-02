@@ -5,12 +5,22 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Organization Projects</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    Show projects that belong to Organizations user is a member of.
                 </div>
             </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">User Projects</div>
+
+                <div class="panel-body">
+                    Show Projects that belong to user.
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>
