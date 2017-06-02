@@ -27,4 +27,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function organizations()
+    {
+        return $this->hasMany(Organization::class);
+    }
+
+    public function projects()
+    {
+        return $this->morphMany(Project::class, 'projectable');
+    }
 }
