@@ -4,8 +4,77 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "831ab2928180f4c75df3beed15ea6205",
+    "content-hash": "6f653478a08d7614d768903c0e186caa",
     "packages": [
+        {
+            "name": "cartalyst/support",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cartalyst/support.git",
+                "reference": "c90931d25e89734ba89875a769af6b2e050593a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cartalyst/support/zipball/c90931d25e89734ba89875a769af6b2e050593a5",
+                "reference": "c90931d25e89734ba89875a769af6b2e050593a5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/mail": "~4.1|~5.0",
+                "illuminate/validation": "~4.1|~5.0",
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "component": "package",
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cartalyst\\Support\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cartalyst LLC",
+                    "email": "help@cartalyst.com"
+                },
+                {
+                    "name": "Bruno Gaspar",
+                    "email": "bruno.gaspar@cartalyst.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Dan Syme",
+                    "email": "dan.syme@cartalyst.com",
+                    "role": "Project Lead"
+                },
+                {
+                    "name": "Suhayb Wardany",
+                    "email": "su.wardany@cartalyst.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Support helpers.",
+            "keywords": [
+                "cartalyst",
+                "helper",
+                "laravel",
+                "support"
+            ],
+            "time": "2015-06-24T13:00:53+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -960,6 +1029,40 @@
                 "shell"
             ],
             "time": "2017-05-17T06:49:19+00:00"
+        },
+        {
+            "name": "pta/formbuilder",
+            "version": "0.2.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drparham/formbuilder.git",
+                "reference": "ba0905433f28a8a66f6616c83089bf931acf7147"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drparham/formbuilder/zipball/ba0905433f28a8a66f6616c83089bf931acf7147",
+                "reference": "ba0905433f28a8a66f6616c83089bf931acf7147",
+                "shasum": ""
+            },
+            "require": {
+                "cartalyst/support": "1.1.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pta\\Formbuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Dustin Parham",
+                    "email": "dr.parham@gmail.com"
+                }
+            ],
+            "description": "Automatically generate form definitions from SQL Schema",
+            "time": "2016-10-25T03:55:16+00:00"
         },
         {
             "name": "ramsey/uuid",
