@@ -179,6 +179,7 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         Rinvex\Repository\Providers\RepositoryServiceProvider::class,
         Silber\Bouncer\BouncerServiceProvider::class,
+        Pta\Formbuilder\Providers\FormBuilderServiceProvider::class,
 
     ],
 
@@ -229,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Bouncer' => Silber\Bouncer\BouncerFacade::class,
+        'FormBuilder'=> Pta\FormBuilder\Facades\FormBuilder::class,
     ],
 
 ];
