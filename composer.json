@@ -10,7 +10,7 @@
         "laravel/passport": "^2.0",
         "laravel/tinker": "~1.0",
         "marc-mabe/php-enum": "^2.3",
-        "pta/formbuilder": "^0.2.10",
+        "pta/formbuilder": "^1.0.0",
         "rinvex/repository": "^2.0",
         "silber/bouncer": "v1.0.0-beta.2"
     },

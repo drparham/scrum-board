@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "52ff192a3a3dc9f71ec5688ac47fee43",
+    "content-hash": "92c99257d988e9b5ee8e3769332fd84c",
     "packages": [
         {
             "name": "cartalyst/support",
@@ -656,16 +656,16 @@
         },
         {
             "name": "laravel/passport",
-            "version": "v2.0.7",
+            "version": "v2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/passport.git",
-                "reference": "f047e3afc07a97054a42c5a84096521fbe947140"
+                "reference": "3a88561a87e0955ebd2ef0fd8c68b2098b6acd97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/passport/zipball/f047e3afc07a97054a42c5a84096521fbe947140",
-                "reference": "f047e3afc07a97054a42c5a84096521fbe947140",
+                "url": "https://api.github.com/repos/laravel/passport/zipball/3a88561a87e0955ebd2ef0fd8c68b2098b6acd97",
+                "reference": "3a88561a87e0955ebd2ef0fd8c68b2098b6acd97",
                 "shasum": ""
             },
             "require": {
@@ -716,20 +716,20 @@
                 "oauth",
                 "passport"
             ],
-            "time": "2017-06-01T20:11:56+00:00"
+            "time": "2017-06-02T16:20:40+00:00"
         },
         {
             "name": "laravel/tinker",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/tinker.git",
-                "reference": "3d5b675b55b24ccbf86395964042dbe061d5a965"
+                "reference": "7eb2e281395131897407285672ef5532e87e17f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/tinker/zipball/3d5b675b55b24ccbf86395964042dbe061d5a965",
-                "reference": "3d5b675b55b24ccbf86395964042dbe061d5a965",
+                "url": "https://api.github.com/repos/laravel/tinker/zipball/7eb2e281395131897407285672ef5532e87e17f9",
+                "reference": "7eb2e281395131897407285672ef5532e87e17f9",
                 "shasum": ""
             },
             "require": {
@@ -750,6 +750,11 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Tinker\\TinkerServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -774,7 +779,7 @@
                 "laravel",
                 "psysh"
             ],
-            "time": "2016-12-30T18:13:17+00:00"
+            "time": "2017-06-01T16:31:26+00:00"
         },
         {
             "name": "lcobucci/jwt",
@@ -1643,16 +1648,16 @@
         },
         {
             "name": "pta/formbuilder",
-            "version": "0.2.10",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drparham/formbuilder.git",
-                "reference": "ba0905433f28a8a66f6616c83089bf931acf7147"
+                "reference": "24f484973f2c913e913b53665b8c774f92e74f3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drparham/formbuilder/zipball/ba0905433f28a8a66f6616c83089bf931acf7147",
-                "reference": "ba0905433f28a8a66f6616c83089bf931acf7147",
+                "url": "https://api.github.com/repos/drparham/formbuilder/zipball/24f484973f2c913e913b53665b8c774f92e74f3a",
+                "reference": "24f484973f2c913e913b53665b8c774f92e74f3a",
                 "shasum": ""
             },
             "require": {
@@ -1673,7 +1678,7 @@
                 }
             ],
             "description": "Automatically generate form definitions from SQL Schema",
-            "time": "2016-10-25T03:55:16+00:00"
+            "time": "2017-06-02T17:15:39+00:00"
         },
         {
             "name": "ramsey/uuid",
