@@ -13,7 +13,7 @@ class CreateTagRelationshipsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tag_relationships', function (Blueprint $table) {
+        Schema::create('taggables', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('tag_id');
             $table->integer('tagable_id');
@@ -29,6 +29,6 @@ class CreateTagRelationshipsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tag_relationships');
+        Schema::dropIfExists('taggables');
     }
 }
