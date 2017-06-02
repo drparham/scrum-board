@@ -16,8 +16,11 @@ class CreateSprintRows extends Migration
         Schema::create('sprint_rows', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('sprint_id');
-            $table->string('type'); //RowType Enum ('Bugs', 'Feature')
+            $table->integer('order');
             $table->timestamps();
+
+            $table->foreign('sprint_id')->references('id')->on('sprints');
+
         });
     }
 
@@ -28,6 +31,6 @@ class CreateSprintRows extends Migration
      */
     public function down()
     {
-        Schema::drop('sprint_rows');
+        Schema::dropIfExists('sprint_rows');
     }
 }

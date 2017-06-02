@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrganizationsTable extends Migration
+class CreateSprintUserStoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,16 @@ class CreateOrganizationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('organizations', function (Blueprint $table) {
+        Schema::create('user_stories', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('sprint_row_id');
             $table->string('name');
+            $table->text('description');
+            $table->string('type'); //UserStoryType Enum ('Bugs', 'Feature')
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('sprint_row_id')->references('id')->on('sprint_rows');
+
         });
     }
 
@@ -30,6 +33,6 @@ class CreateOrganizationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('organizations');
+        Schema::dropIfExists('sprint_rows');
     }
 }

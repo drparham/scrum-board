@@ -18,6 +18,9 @@ class CreateOrganizationUsersTable extends Migration
             $table->integer('user_id');
             $table->integer('organization_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('organization_id')->references('id')->on('organizations');
         });
     }
 
@@ -28,6 +31,6 @@ class CreateOrganizationUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('organization_users');
+        Schema::dropIfExists('organization_users');
     }
 }

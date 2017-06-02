@@ -20,6 +20,8 @@ class CreateSprintsTable extends Migration
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->timestamps();
+
+            $table->foreign('project_id')->references('id')->on('projects');
         });
     }
 
@@ -30,6 +32,6 @@ class CreateSprintsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('sprints');
+        Schema::dropIfExists('sprints');
     }
 }
