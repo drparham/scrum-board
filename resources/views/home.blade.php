@@ -20,7 +20,7 @@
                     <div class="panel-heading">Organization Projects</div>
                     <div class="panel-body">
                         <div class="panel-content">
-                            You do not belong to any organizations, would you like to <a href="#">create</a> one?
+                            You do not belong to any organizations, would you like to <a href="/api/v1/org/create">create</a> one?
                         </div>
                     </div>
                 </div>
