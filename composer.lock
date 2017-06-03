@@ -656,16 +656,16 @@
         },
         {
             "name": "laravel/passport",
-            "version": "v2.0.9",
+            "version": "v2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/passport.git",
-                "reference": "3a88561a87e0955ebd2ef0fd8c68b2098b6acd97"
+                "reference": "cd908e73505f7d3aad101d3177280db952ffc190"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/passport/zipball/3a88561a87e0955ebd2ef0fd8c68b2098b6acd97",
-                "reference": "3a88561a87e0955ebd2ef0fd8c68b2098b6acd97",
+                "url": "https://api.github.com/repos/laravel/passport/zipball/cd908e73505f7d3aad101d3177280db952ffc190",
+                "reference": "cd908e73505f7d3aad101d3177280db952ffc190",
                 "shasum": ""
             },
             "require": {
@@ -716,7 +716,7 @@
                 "oauth",
                 "passport"
             ],
-            "time": "2017-06-02T16:20:40+00:00"
+            "time": "2017-06-02T21:51:18+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1648,16 +1648,16 @@
         },
         {
             "name": "pta/formbuilder",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drparham/formbuilder.git",
-                "reference": "24f484973f2c913e913b53665b8c774f92e74f3a"
+                "reference": "d39ac771dbe3a54c03270e5efd2847d351019ef8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drparham/formbuilder/zipball/24f484973f2c913e913b53665b8c774f92e74f3a",
-                "reference": "24f484973f2c913e913b53665b8c774f92e74f3a",
+                "url": "https://api.github.com/repos/drparham/formbuilder/zipball/d39ac771dbe3a54c03270e5efd2847d351019ef8",
+                "reference": "d39ac771dbe3a54c03270e5efd2847d351019ef8",
                 "shasum": ""
             },
             "require": {
@@ -1678,7 +1678,7 @@
                 }
             ],
             "description": "Automatically generate form definitions from SQL Schema",
-            "time": "2017-06-02T17:15:39+00:00"
+            "time": "2017-06-03T16:21:23+00:00"
         },
         {
             "name": "ramsey/uuid",
