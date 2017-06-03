@@ -15,7 +15,7 @@ class CreateSprintsTable extends Migration
     {
         Schema::create('sprints', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('project_id');
+            $table->integer('project_id')->unsigned();
             $table->string('name');
             $table->dateTime('start_date');
             $table->dateTime('end_date');

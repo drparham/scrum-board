@@ -15,7 +15,7 @@ class CreateSprintColumns extends Migration
     {
         Schema::create('sprint_columns', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('sprint_id');
+            $table->integer('sprint_id')->unsigned();
             $table->integer('order');
             $table->string('name');
             $table->timestamps();
