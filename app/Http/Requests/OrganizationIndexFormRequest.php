@@ -10,7 +10,7 @@ class OrganizationIndexFormRequest extends FormRequest
     public function authorize()
     {
         $org = Organization::find($this->route('id'));
-        dd($org);
+
         return $org && $this->user()->can('update', $org);
     }
 

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\OrganizationIndexFormRequest;
 use App\Models\Organization;
-use Illuminate\Support\Facades\Auth;
 
 class OrganizationController extends Controller
 {
@@ -15,9 +14,8 @@ class OrganizationController extends Controller
 
     public function index(OrganizationIndexFormRequest $request, $organization_id)
     {
-        $user         = Auth::user();
         $organization = Organization::where('id', $organization_id)->first();
 
-        return view('home')->with(['organization' => $organization]);
+        return view('Organizations.index')->with(['organization' => $organization]);
     }
 }
