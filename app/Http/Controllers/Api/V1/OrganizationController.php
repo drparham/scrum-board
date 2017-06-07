@@ -8,7 +8,6 @@ use App\Http\Requests\OrganizationEditFormRequest;
 use App\Http\Requests\OrganizationStoreFormRequest;
 use App\Http\Requests\OrganizationUpdateFormRequest;
 use App\Models\Organization;
-use Illuminate\Http\Request;
 
 class OrganizationController extends Controller
 {

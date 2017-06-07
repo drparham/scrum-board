@@ -6,11 +6,11 @@
             <div class="col-md-8 col-md-offset-2">
                 @if (!$project->sprints->isEmpty())
                     <div class="panel panel-default">
-                        <div class="panel-heading">{{$project->name}} Sprints</div>
+                        <div class="panel-heading">{{$project->name}} Sprints <a href="/api/v1/sprint/create/{{$project->id}}">+</a></div>
                         <div class="panel-body">
                             @foreach($project->sprints as $sprint)
                                 <div class="panel-content">
-                                    <a href="#">{{$sprint->name}}</a>
+                                    <a href="/sprint/{{$sprint->id}}">{{$sprint->name}}</a>
                                     {{$sprint->description}}
                                 </div>
                             @endforeach
@@ -21,7 +21,7 @@
                         <div class="panel-heading">{{$project->name}} Sprints</div>
                         <div class="panel-body">
                             <div class="panel-content">
-                                You have no Sprints, would you like to <a href="#">create</a> one?
+                                You have no Sprints, would you like to <a href="/api/v1/sprint/create/{{$project->id}}">create</a> one?
                             </div>
                         </div>
                     </div>

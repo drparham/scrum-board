@@ -47,8 +47,11 @@ return [
         'fax'               => 'Fax Number',
         'dob'               => 'Date of Birth',
         'tos'               => 'Terms of Service',
-        'name'              => 'Name'
-    ],
+        'name'              => 'Name',
+        'description'       => 'Description',
+        'start_date'        => 'Start Date',
+        'end_date'          => 'End Date'
+],
     /*
     |--------------------------------------------------------------------------
     | Default mapping of column types to form types
@@ -64,7 +67,7 @@ return [
         'hidden'            => 'Hidden',
         'varchar'           => 'Input',
         'int'               => 'Input',
-        'date'              => 'DateInput',
+        'datetime'          => 'DateInput',
         'tinyint'           => 'CheckBox',
         'text'              => 'Text',
         'smallint'          => 'CheckBox'

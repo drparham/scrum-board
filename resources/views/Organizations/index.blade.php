@@ -6,11 +6,11 @@
             <div class="col-md-8 col-md-offset-2">
                 @if (!$organization->projects->isEmpty())
                     <div class="panel panel-default">
-                        <div class="panel-heading">{{$organization->name}} Projects</div>
+                        <div class="panel-heading">{{$organization->name}} Projects <a href="/api/v1/project/create/0/{{$organization->id}}">+</a></div>
                         <div class="panel-body">
                             @foreach($organization->projects as $project)
                                 <div class="panel-content">
-                                    <a href="#">{{$project->name}}</a>
+                                    <a href="/project/{{$project->id}}">{{$project->name}}</a>
                                     {{$project->description}}
                                 </div>
                             @endforeach
@@ -21,7 +21,7 @@
                         <div class="panel-heading">{{$organization->name}} Projects</div>
                         <div class="panel-body">
                             <div class="panel-content">
-                                You have no projects, would you like to <a href="#">create</a> one?
+                                You have no projects, would you like to <a href="/api/v1/project/create/0/{{$organization->id}}">create</a> one?
                             </div>
                         </div>
                     </div>

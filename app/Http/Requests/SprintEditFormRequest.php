@@ -2,13 +2,16 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Sprint;
 use Illuminate\Foundation\Http\FormRequest;
 
-class OrganizationStoreFormRequest extends FormRequest
+class SprintEditFormRequest extends FormRequest
 {
     public function authorize()
     {
-        return $this->user()->can('create', 'App\Models\Organization');
+        $sprint = Sprint::find($this->route('id'));
+
+        return $sprint && $this->user()->can('edit', $sprint);
     }
 
     public function rules()

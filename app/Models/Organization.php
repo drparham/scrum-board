@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Pta\Formbuilder\Lib\Fields\HiddenField;
 use Pta\Formbuilder\Lib\ModelSchemaBuilder;

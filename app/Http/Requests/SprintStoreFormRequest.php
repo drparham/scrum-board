@@ -4,11 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class OrganizationStoreFormRequest extends FormRequest
+class SprintStoreFormRequest extends FormRequest
 {
     public function authorize()
     {
-        return $this->user()->can('create', 'App\Models\Organization');
+        return $this->user()->can('create', 'App\Models\Sprint');
     }
 
     public function rules()

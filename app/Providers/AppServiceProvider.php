@@ -15,14 +15,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Relation::morphMap([
-            'user'         => 'App\Model\User',
-            'organization' => 'App\Model\Organization',
-            'project'      => 'App\Model\Project',
-            'user_story'   => 'App\Model\UserStory',
-            'task'         => 'App\Model\Task',
-            'sprint'       => 'App\Model\Sprint',
-            'tag'          => 'App\Model\Tag',
-            'comment'      => 'App\Model\Comment',
+            'User'         => 'App\Models\User',
+            'Organization' => 'App\Models\Organization',
+            'Project'      => 'App\Models\Project',
+            'User_story'   => 'App\Models\UserStory',
+            'Task'         => 'App\Models\Task',
+            'Sprint'       => 'App\Models\Sprint',
+            'Tag'          => 'App\Models\Tag',
+            'Comment'      => 'App\Models\Comment',
         ]);
     }
 

@@ -9,9 +9,7 @@ class ProjectStoreFormRequest extends FormRequest
 {
     public function authorize()
     {
-        $project = Project::find($this->route('id'));
-
-        return $project && $this->user()->can('store', $project);
+        return $this->user()->can('create', 'App\Models\Project');
     }
 
     public function rules()

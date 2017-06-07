@@ -14,7 +14,7 @@ class OrganizationController extends Controller
 
     public function index(OrganizationIndexFormRequest $request, $organization_id)
     {
-        $organization = Organization::where('id', $organization_id)->first();
+        $organization = Organization::where('id', $organization_id)->with('projects')->first();
 
         return view('Organizations.index')->with(['organization' => $organization]);
     }

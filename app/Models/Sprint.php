@@ -2,9 +2,28 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Pta\Formbuilder\Lib\Fields\HiddenField;
+use Pta\Formbuilder\Lib\ModelSchemaBuilder;
 
-class Sprint extends Model
+class Sprint extends ModelSchemaBuilder
 {
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
 
+    public function sprintRows()
+    {
+        return $this->hasMany(SprintRow::class);
+    }
+
+    public function sprintColumns()
+    {
+        return $this->hasMany(SprintColumn::class);
+    }
+
+    public function FB_project_id()
+    {
+        return new HiddenField();
+    }
 }
