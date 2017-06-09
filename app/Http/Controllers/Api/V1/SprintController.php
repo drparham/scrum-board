@@ -8,12 +8,19 @@ use App\Http\Requests\SprintEditFormRequest;
 use App\Http\Requests\SprintStoreFormRequest;
 use App\Http\Requests\SprintUpdateFormRequest;
 use App\Models\Sprint;
+use Pta\Formbuilder\Facades\FormBuilder;
+
 
 class SprintController extends Controller
 {
     public function create($project_id)
     {
-        return view('Sprints.create')->with(['id' => $project_id]);
+        $sprint = new Sprint();
+        $sprint->setProjectId($project_id);
+
+        $form = FormBuilder::buildForm($sprint, 'POST', 'storeSprint', 'create', null, null);
+
+        return view('Sprints.create')->with(['form' => $form]);
     }
 
     public function store(SprintStoreFormRequest $request)
@@ -26,12 +33,14 @@ class SprintController extends Controller
         $sprint->end_date   = $request->end_date;
         $sprint->save();
 
-        return redirect()->route('sprint', $sprint->id);
+        return redirect()->route('sprints', $sprint->id);
     }
 
     public function edit(SprintEditFormRequest $request, $id)
     {
-        return view('Sprints.edit')->with(['id' => $id]);
+        $form = FormBuilder::buildForm('Sprint', 'POST', 'updateSprint', 'update', $id);
+
+        return view('Sprints.edit')->with(['form' => $form]);
     }
 
     public function update(SprintUpdateFormRequest $request)

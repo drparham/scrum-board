@@ -8,13 +8,11 @@
                     <div class="panel-heading">Create Sprint</div>
                     <div class="panel-body">
                         <div class="panel-content">
-                            {!! FormBuilder::buildForm('Sprint', 'POST', 'storeSprint', 'create', null, null) !!}
+                            {!! $form !!}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <formbuilder-create-sprint v-bind:project-id='{{$id}}'></formbuilder-create-sprint>
-
 @endsection

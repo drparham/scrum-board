@@ -8,7 +8,7 @@
                     <div class="panel-heading">Edit Organization</div>
                     <div class="panel-body">
                         <div class="panel-content">
-                            {!! FormBuilder::buildForm('Sprint', 'POST', 'updateSprint', 'update', $id) !!}
+                            {!! $form !!}
                         </div>
                     </div>
                 </div>
