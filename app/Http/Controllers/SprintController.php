@@ -14,7 +14,7 @@ class SprintController extends Controller
 
     public function index(SprintIndexFormRequest $request, $sprint_id)
     {
-        $sprint = Sprint::where('id', $sprint_id)->with(['sprintRows', 'sprintColumns'])->first();
+        $sprint = Sprint::where('id', $sprint_id)->with(['rows', 'columns', 'userStories'])->first();
 
         return view('Sprints.index')->with(['sprint' => $sprint]);
     }
