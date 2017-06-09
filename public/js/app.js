@@ -1127,33 +1127,6 @@ Vue.component('passport-authorized-clients', __webpack_require__(44));
 
 Vue.component('passport-personal-access-tokens', __webpack_require__(46));
 
-Vue.component('formbuilder-create-project', {
-    template: '<div></div>',
-    props: {
-        projectId: Number,
-        projectType: Number
-    },
-    mounted: function mounted() {
-        var type = document.getElementById('projectable_type');
-        var id = document.getElementById('projectable_id');
-
-        id.setAttribute('value', this.projectId);
-        type.setAttribute('value', this.projectType);
-    }
-});
-
-Vue.component('formbuilder-create-sprint', {
-    template: '<div></div>',
-    props: {
-        projectId: Number
-    },
-    mounted: function mounted() {
-        var id = document.getElementById('project_id');
-
-        id.setAttribute('value', this.projectId);
-    }
-});
-
 var app = new Vue({
     el: '#app'
 });

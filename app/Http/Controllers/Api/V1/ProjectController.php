@@ -17,7 +17,12 @@ class ProjectController extends Controller
     public function create(Request $request, $type, $id)
     {
         $name = title_case(ProjectTypeEnum::byOrdinal($type));
-        $form = FormBuilder::buildForm('Project', 'POST', 'storeProject', 'create', null, null);
+
+        $project = new Project();
+        $project->setProjectableId($id);
+        $project->setProjectableType($type);
+
+        $form = FormBuilder::buildForm($project, 'POST', 'storeProject', 'create', null, null);
 
         return view('Projects.create')->with(['form' => $form, 'type' => $type, 'id' => $id, 'name' => $name]);
     }
@@ -30,10 +35,10 @@ class ProjectController extends Controller
         $parentModel   = 'App\\Models\\' . $projectTye;
         $parent        = $parentModel::find($request->projectable_id);
 
-        $project->projectable_type = $projectTye;
-        $project->projectable_id   = $request->projectable_id;
-        $project->name             = $request->name;
-        $project->description      = $request->description;
+        $project->projectable_id    = $request->projectable_id;
+        $project->projectable_type  = $projectTye;
+        $project->name              = $request->name;
+        $project->description       = $request->description;
 
         $project->projectable()->associate($parent);
         $project->save();
@@ -43,7 +48,9 @@ class ProjectController extends Controller
 
     public function edit(ProjectEditFormRequest $request, $id)
     {
-        return view('Projects.edit')->with(['id' => $id]);
+        $form = FormBuilder::buildForm('Project', 'POST', 'updateProject', 'update', $id);
+
+        return view('Projects.edit')->with(['form' => $form]);
     }
 
     public function update(ProjectUpdateFormRequest $request)

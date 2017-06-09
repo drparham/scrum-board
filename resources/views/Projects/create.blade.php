@@ -15,5 +15,4 @@
             </div>
         </div>
     </div>
-    <formbuilder-create-project v-bind:project-type='{{$type}}' v-bind:project-id='{{$id}}'></formbuilder-create-project>
 @endsection
