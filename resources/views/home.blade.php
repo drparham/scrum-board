@@ -34,7 +34,7 @@
                     <div class="panel-body">
                         @foreach($projects as $project)
                             <div class="panel-content">
-                                <a href="/projects/{{$project->id}}">{{$project->name}}</a>
+                                <a href="/project/{{$project->id}}">{{$project->name}}</a>
                                 {{$project->description}}
                             </div>
                         @endforeach
