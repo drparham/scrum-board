@@ -19,7 +19,7 @@ class CreateSprintUserStoryTable extends Migration
             $table->integer('sprint_row_id')->unsigned();
             $table->string('name');
             $table->text('description');
-            $table->string('type'); //UserStoryType Enum ('Bugs', 'Feature')
+            $table->tinyInteger('type'); //UserStoryType Enum ('Bugs', 'Feature', 'Improvement)
             $table->timestamps();
 
             $table->foreign('sprint_id')->references('id')->on('sprints');

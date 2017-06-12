@@ -4,9 +4,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                <ol class="breadcrumb">
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li class="active">{{$organization->name}}</li>
+                </ol>
                 @if (!$organization->projects->isEmpty())
                     <div class="panel panel-default">
-                        <div class="panel-heading">{{$organization->name}} Projects <a href="/api/v1/project/create/0/{{$organization->id}}">+</a></div>
+                        <div class="panel-heading">{{$organization->name}} Projects <a href="/api/v1/project/create/0/{{$organization->id}}"><span class="glyphicon glyphicon-plus"></span></a></div>
                         <div class="panel-body">
                             @foreach($organization->projects as $project)
                                 <div class="panel-content">

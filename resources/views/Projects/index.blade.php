@@ -4,6 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                <ol class="breadcrumb">
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/organization/{{$project->projectable->id}}">{{$project->projectable->name}}</a></li>
+                    <li class="active">{{$project->name}}</li>
+                </ol>
                 @if (!$project->sprints->isEmpty())
                     <div class="panel panel-default">
                         <div class="panel-heading">{{$project->name}} Sprints <a href="/api/v1/sprint/create/{{$project->id}}">+</a></div>

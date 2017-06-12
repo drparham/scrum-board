@@ -28,8 +28,10 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $user = User::find(1);
-        Bouncer::assign('admin')->to($user);
-        Bouncer::allow('admin')->everything();
+        if ($user) {
+            Bouncer::assign('admin')->to($user);
+            Bouncer::allow('admin')->everything();
+        }
 
         $this->registerPolicies();
 

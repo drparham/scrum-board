@@ -32,37 +32,6 @@ Vue.component(
     require('./components/passport/PersonalAccessTokens.vue')
 );
 
-Vue.component(
-    'formbuilder-create-project', {
-        template: '<div></div>',
-        props: {
-            projectId: Number,
-            projectType: Number
-        },
-        mounted: function () {
-            let type = document.getElementById('projectable_type');
-            let id   = document.getElementById('projectable_id');
-
-            id.setAttribute('value', this.projectId);
-            type.setAttribute('value', this.projectType);
-        }
-     }
-);
-
-Vue.component(
-    'formbuilder-create-sprint', {
-        template: '<div></div>',
-        props: {
-            projectId: Number,
-        },
-        mounted: function () {
-            let id   = document.getElementById('project_id');
-
-            id.setAttribute('value', this.projectId);
-        }
-    }
-);
-
 const app = new Vue({
     el: '#app'
 });

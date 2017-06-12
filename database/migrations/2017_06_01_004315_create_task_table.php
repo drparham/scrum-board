@@ -21,7 +21,6 @@ class CreateTaskTable extends Migration
             $table->integer('points');
             $table->string('title');
             $table->text('details');
-            $table->tinyInteger('status'); //StatusEnum
             $table->tinyInteger('type'); //TaskType Enum ('Bug', 'Feature', 'Chore')
             $table->timestamps();
 

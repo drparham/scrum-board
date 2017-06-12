@@ -51,4 +51,5 @@ class SprintController extends Controller
     public function delete(SprintDeleteFormRequest $request)
     {
         //remove organization
-    }}
+    }
+}
